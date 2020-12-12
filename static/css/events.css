@@ -97,7 +97,7 @@
 .event{
     width: 330.83px;
     height: 330.83px;
-    margin: 10px;
+    margin: 10px 20px 10px 0;
     background-color: darkblue;
     border-radius: 11.9661px;
     background-position: 50% 50%;
