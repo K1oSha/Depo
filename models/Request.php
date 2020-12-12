@@ -46,7 +46,7 @@ class Request extends \yii\db\ActiveRecord
     {
         return [
             [['author_id', 'availability', 'confirmed', 'rejected', 'deleted', 'place_talk', 'place_hall', 'visited', 'registered', 'views'], 'integer'],
-            [['desc', 'extra_desc', 'rej_msg','category_id'], 'string'],
+            [['desc', 'extra_desc', 'rej_msg','category_id','contacts'], 'string'],
             [['register_end', 'start', 'end'], 'safe'],
             [['title', 'bannerurl', 'broadcasturl'], 'string', 'max' => 255],
         ];
