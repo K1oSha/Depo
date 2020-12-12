@@ -1,0 +1,220 @@
+.main{
+    font-family: Raleway;
+    font-style: normal;
+    margin-top: 229px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1058px;
+}
+.rule_tittle{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #394A58;
+    margin-bottom: 18px;
+}
+.rules{
+    width: 1058px;
+    height: 132px;
+    background: #FFFFFF;
+    border: 0.828885px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.9199px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #394A58;
+    padding: 20px 0 0 23px;
+}
+.rule-div{
+    margin-bottom: 84px;
+}
+.head_title{
+    font-weight: bold;
+    font-size: 21.551px;
+    line-height: 25px;
+    color: #394A58;
+    margin-bottom: 21px;
+}
+.main_info_data{
+    position: relative;
+    display: flex;
+    width: 1058px;
+    height: 445px;
+    background: #FFFFFF;
+    border: 0.828885px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.9199px;
+}
+.text_data{
+    margin: 33px 0 0 23px;
+}
+.title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #394A58;
+    margin-bottom: 14px;
+}
+.event_tittle > input{
+    width: 587.52px;
+    height: 46.93px;
+    background: #FFFFFF;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    outline: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(57, 74, 88, 0.4);
+    padding-left: 21px;
+}
+.event_tittle{
+    margin-bottom: 35px;
+}
+.radio-div{
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #394A58;
+}
+.radio-div input{
+    margin-right: 14px;
+}
+.availability{
+    margin-bottom: 53px;
+}
+.description textarea{
+    width: 588px;
+    height: 108px;
+    resize: none;
+    background: #FFFFFF;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    outline: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: rgba(57, 74, 88, 0.4);
+}
+.load_photo{
+    position: relative;
+    width: 367px;
+    height: 334.67px;
+    background: url(../templates/plus_event.svg) no-repeat center 90px, #FFFFFF;
+    border: 0.788085px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.1855px;
+    margin: 70px 0 0 40px;
+}
+.load_photo > div{
+    position: relative;
+    font-weight: 500;
+    font-size: 17.3379px;
+    line-height: 20px;
+    color: #394A58;
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 225px;
+}
+.date_time{
+    margin-top: 35px;
+}
+.date_time_block{
+    width: 1058px;
+    height: 280px;
+    background: #FFFFFF;
+    border: 0.828885px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.9199px;
+}
+.date_time_block_info{
+    margin: 39px 0 0 21px;
+}
+.start_reg{
+    display: flex;
+    margin-bottom: 36px;
+}
+.start_reg > .title{
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+.date_input{
+    width: 190px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    margin-left: 5px;
+}
+.time_reg{
+    width: 116px;
+    height: 42px;
+    background: rgba(57, 74, 88, 0.56);
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    margin-left: 13px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+
+    color: #FFFFFF;
+}
+.finish_reg{
+    display: flex;
+    margin-bottom: 30px;
+}
+.finish_reg > .title{
+    margin-top: 12px;
+}
+.event_date{
+    display: flex;
+}
+.event_date > .title{
+    margin-top: 10px;
+}
+.start_end_event_input{
+    width: 190px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    margin-left: 5px;
+}
+.speakers{
+    margin-top: 35px;
+}
+.speakers_block{
+    width: 1058px;
+    height: 239px;
+    background: #FFFFFF;
+    border: 0.828885px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.9199px;
+}
+.speakers_block_info{
+    margin: 49px 0 0 21px;
+}
+.search_email{
+    width: 587.52px;
+    height: 46.93px;
+    background:url(../templates/loupe.svg) no-repeat scroll 7px 7px, #FFFFFF;
+    background-size: 30px
+    border: none;
+    outline: none;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(57, 74, 88, 0.4);
+}

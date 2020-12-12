@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/create_event.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="data">
+            <div>
+                <img src="../templates/logo.svg" alt="" class="logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="../index/events.html">Мероприятия</a></li>
+                    <li><a href="#">Трансляции</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+            <div class="autorization">
+                Вход
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="rule-div">
+            <div class="rule_tittle">Создать мероприятие</div>
+            <div class="rules">Чтобы провести мероприятие на нашей прощадке, соблюдайте некоторые правила:<br>
+                регистрация производится только на этой платформе;<br>
+                участие бесплатно.
+            </div>
+        </div>
+        <div class="main_info">
+            <div class="head_title">
+                Основная информация
+            </div>
+            <div class="main_info_data">
+                <div class="text_data">
+                    <div class="event_tittle">
+                        <div class="title">Название*</div>
+                        <input placeholder="Введите название мероприятия" type="text">
+                    </div>
+                    <div class="availability">
+                        <div class="title">Доступность*</div>
+                        <div class="radio-div">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male" style="margin-right:52px;">Для всех желающих</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Отбор участников</label>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="title">Описание*</div>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="load_photo">
+                    <div>Загрузить фото</div>
+                </div>
+            </div>
+        </div>
+        <div class="date_time">
+            <div class="head_title">Время и дата</div>
+            <div class="date_time_block">
+                <div class="date_time_block_info">
+                    <div class="start_reg">
+                        <div class="title">Начало регистрации*</div>
+                        <div class="date_input"></div>
+                        <div class="title" style="margin-left: 276px;">Время начала*</div>
+                        <input class="time_reg" type="text">
+                    </div>
+                    <div class="finish_reg">
+                        <div class="title">Конец регистрации*</div>
+                        <div class="date_input" style="margin-left: 17px;"></div>
+                        <div class="title" style="margin-left: 276px; margin-right: 9px;">Время конца*</div>
+                        <input class="time_reg" type="text">
+                    </div>
+                    <div class="event_date">
+                        <div class="title">День(дни) проведения мероприятия*</div>
+                        <div class="start_end_event_input"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="speakers">
+            <div class="head_title">Спикеры</div>
+            <div class="speakers_block">
+                <div class="speakers_block_info">
+                    <div class="title">Пригласите спикеров используя их электронную почту.</div>
+                    <input placeholder="Email" class="search_email" type="text">
+                    <div class="speakers_name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
