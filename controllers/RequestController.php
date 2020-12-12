@@ -85,11 +85,13 @@ class RequestController extends Controller
     public function actionRegister($id)
     {
         $model = new Contributor;
-        if (Yii::$app->request->post())
+        Yii::$app->session['test1'] = $model;
+        if (Yii::$app->request->isPost)
         {
-            $model->user_id = Yii::$app->user->identity->id;
+            $model->user_id    = Yii::$app->user->identity->id;
             $model->request_id = $id;
-            $model->came = 0;
+            $model->came       = 0;
+            Yii::$app->session['test'] = $model;
             $model->save();
         }
     }

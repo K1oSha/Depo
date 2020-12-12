@@ -54,7 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
 </div>
-<form action="<?= '/request/registerguest?id=' . $model->id ?>" method="post">
+<? if (Yii::$app->user->isGuest) { ?>
+    <form action="<?= '/request/registerguest?id=' . $model->id ?>" method="post">
     <p>имя</p>
     <input type="text" id="register-name" class="form-control" name="name">
     <p>эмеил</p>
@@ -63,3 +64,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <input type="text" id="register-phone" class="form-control" name="phone">
     <button type="submit" class="btn btn-success">Зарегаться</button>
 </form>
+<? } else { ?>
+
+    <form action="<?= '/request/register?id=' . $model->id?> " method="post">
+    <button type="submit" class="btn btn-success">Зарегаться</button>
+    </form>
+    <? } ?>
