@@ -45,8 +45,8 @@ class Request extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author_id', 'availability', 'confirmed', 'rejected', 'deleted', 'place_talk', 'place_hall', 'category_id', 'visited', 'registered', 'views'], 'integer'],
-            [['desc', 'extra_desc', 'rej_msg'], 'string'],
+            [['author_id', 'availability', 'confirmed', 'rejected', 'deleted', 'place_talk', 'place_hall', 'visited', 'registered', 'views'], 'integer'],
+            [['desc', 'extra_desc', 'rej_msg','category_id'], 'string'],
             [['register_end', 'start', 'end'], 'safe'],
             [['title', 'bannerurl', 'broadcasturl'], 'string', 'max' => 255],
         ];

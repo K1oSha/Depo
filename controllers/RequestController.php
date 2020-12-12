@@ -54,8 +54,11 @@ class RequestController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $model->visited += 1;
+        $model->save();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
     }
 
@@ -71,7 +74,10 @@ class RequestController extends Controller
         if ($model->load(Yii::$app->request->post()))
         {
             $model->author_id = Yii::$app->user->identity->id;
+            $model->category_id =  implode(', ', $model->category_id);
+            Yii::$app->session['jsal'] =$model;
             if ($model->save()) {
+                
                 return $this->redirect(['view', 'id' => $model->id]);
 
             } 
@@ -94,6 +100,11 @@ class RequestController extends Controller
             Yii::$app->session['test'] = $model;
             $model->save();
         }
+        $request = $this->findModel($id);
+        $request->registered += 1;
+        $request->save();
+        return $this->redirect(['view', 'id' => $model->id]);
+
     }
 
     public function actionRegisterguest($id)
@@ -137,8 +148,11 @@ class RequestController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->category_id) $model->category_id =  implode(', ', $model->category_id);
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
