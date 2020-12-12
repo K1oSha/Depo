@@ -10,13 +10,11 @@ use app\models\UserRecord;
 use yii\web\Controller;
 
 class UserController extends Controller{
-
-
     public function actionJoin()
     {
         if(Yii::$app->request->isPost)
             return $this->actionJoinPost();
-             $userJoinForm = new UserJoinForm();
+            $userJoinForm = new UserJoinForm();
             $userRecord = new UserRecord();
 //            $userRecord->setTestUser();
             $userJoinForm->setUserRecord($userRecord);

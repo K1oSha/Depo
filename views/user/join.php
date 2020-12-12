@@ -12,6 +12,10 @@ use yii\widgets\ActiveForm;
         <?php $form = ActiveForm::begin(['id'=>'user-join-form']);?>
         <?= $form->field($userJoinForm,'name') ?>
         <?= $form->field($userJoinForm,'email') ?>
+        <?= $form->field($userJoinForm,'number') ?>
+        <?= $form->field($userJoinForm,'position') ?>
+        <?= $form->field($userJoinForm,'telegram') ?>
+        <?= $form->field($userJoinForm,'whatsapp') ?>
         <?= $form->field($userJoinForm,'password')->passwordInput() ?>
         <?= $form->field($userJoinForm,'password2')->passwordInput() ?>
 

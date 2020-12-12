@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Request;
-use app\models\RequestSearch;
+use app\models\Contributor;
+use app\models\ContributorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RequestController implements the CRUD actions for Request model.
+ * ContributorController implements the CRUD actions for Contributor model.
  */
-class RequestController extends Controller
+class ContributorController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class RequestController extends Controller
     }
 
     /**
-     * Lists all Request models.
+     * Lists all Contributor models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RequestSearch();
+        $searchModel = new ContributorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class RequestController extends Controller
     }
 
     /**
-     * Displays a single Request model.
+     * Displays a single Contributor model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,21 +58,16 @@ class RequestController extends Controller
     }
 
     /**
-     * Creates a new Request model.
+     * Creates a new Contributor model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Request();
+        $model = new Contributor();
 
-        if ($model->load(Yii::$app->request->post()))
-        {
-            $model->author_id = Yii::$app->user->identity->id;
-            if ($model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-
-            } 
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
@@ -81,7 +76,7 @@ class RequestController extends Controller
     }
 
     /**
-     * Updates an existing Request model.
+     * Updates an existing Contributor model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -101,7 +96,7 @@ class RequestController extends Controller
     }
 
     /**
-     * Deletes an existing Request model.
+     * Deletes an existing Contributor model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -115,15 +110,15 @@ class RequestController extends Controller
     }
 
     /**
-     * Finds the Request model based on its primary key value.
+     * Finds the Contributor model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Request the loaded model
+     * @return Contributor the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Request::findOne($id)) !== null) {
+        if (($model = Contributor::findOne($id)) !== null) {
             return $model;
         }
 

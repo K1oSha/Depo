@@ -30,6 +30,10 @@ class UserRecord extends ActiveRecord{
         $this->name = $userJoinForm->name;
         $this->email = $userJoinForm->email;
         $this->setPassword($userJoinForm->password);
+        $this->number = $userJoinForm->number;
+        $this->position = $userJoinForm->position;
+        $this->telegram = $userJoinForm->telegram;
+        $this->whatsapp = $userJoinForm->whatsapp;
     }
     public static function findUserByEmail($email)
     {
@@ -46,4 +50,12 @@ class UserRecord extends ActiveRecord{
         return Yii::$app->security->validatePassword($password,$this->passhash);
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'ФИО',
+            'title' => 'Title',
+        ];
+    }
 }
