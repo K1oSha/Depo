@@ -12,45 +12,44 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'author_id')->textInput() ?>
+    <?//= $form->field($model, 'author_id')->textInput() ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'desc')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'desc')->textarea(['rows' => 6])->label('Описание') ?>
 
-    <?= $form->field($model, 'extra_desc')->textarea(['rows' => 6]) ?>
+    <?//= $form->field($model, 'extra_desc')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'availability')->textInput() ?>
+    <?= $form->field($model, 'availability')->checkbox() ?>
 
-    <?= $form->field($model, 'register_end')->textInput() ?>
 
-    <?= $form->field($model, 'confirmed')->textInput() ?>
+    <?//= $form->field($model, 'confirmed')->textInput() ?>
 
-    <?= $form->field($model, 'rejected')->textInput() ?>
+    <?//= $form->field($model, 'rejected')->textInput() ?>
 
-    <?= $form->field($model, 'rej_msg')->textarea(['rows' => 6]) ?>
+    <?//= $form->field($model, 'rej_msg')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'start')->textInput() ?>
 
     <?= $form->field($model, 'end')->textInput() ?>
-
+    <?= $form->field($model, 'register_end')->textInput() ?>
     <?= $form->field($model, 'bannerurl')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'deleted')->textInput() ?>
+    <?//= $form->field($model, 'deleted')->textInput() ?>
 
-    <?= $form->field($model, 'place_talk')->textInput() ?>
+    <?= $form->field($model, 'place_talk')->checkbox() ?>
 
-    <?= $form->field($model, 'place_hall')->textInput() ?>
+    <?= $form->field($model, 'place_hall')->checkbox() ?>
 
     <?= $form->field($model, 'broadcasturl')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?//= $form->field($model, 'category_id')->textInput() ?>
 
-    <?= $form->field($model, 'visited')->textInput() ?>
+    <?//= $form->field($model, 'visited')->textInput() ?>
 
-    <?= $form->field($model, 'registered')->textInput() ?>
+    <?//= $form->field($model, 'registered')->textInput() ?>
 
-    <?= $form->field($model, 'views')->textInput() ?>
+    <?//= $form->field($model, 'views')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
