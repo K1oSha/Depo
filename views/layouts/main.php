@@ -1,6 +1,7 @@
 <html>
 <? use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+
 ?>
 <? $this->beginPage();?><!--  Тригер для бутстрапа -->
 
@@ -24,7 +25,7 @@ use yii\bootstrap\NavBar;
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="../index/events.html">Мероприятия</a></li>
+                    <li><a href="/request/">Мероприятия</a></li>
                     <li><a href="#">Трансляции</a></li>
                     <li><a href="#">Новости</a></li>
                     <li><a href="#">О нас</a></li>

@@ -22,6 +22,12 @@ class UserController extends Controller{
         return $this->render('join',['userJoinForm'=>$userJoinForm]);
     }
 
+    public function actionCabinet($id)
+    {
+        $model = UserRecord::find()->where(['id'=>$id])->one();
+        return $this->render('cabinet', ['model'=>$model]);
+    }
+
     public function actionJoinPost()
     {
         $userJoinForm = new UserJoinForm();
