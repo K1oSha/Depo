@@ -38,19 +38,28 @@ $this->params['breadcrumbs'][] = $this->title;
             'register_end',
             'confirmed',
             'rejected',
-            'rej_msg:ntext',
+            // 'rej_msg:ntext',
             'start',
             'end',
             'bannerurl',
-            'deleted',
+            // 'deleted',
             'place_talk',
             'place_hall',
             'broadcasturl',
-            'category_id',
-            'visited',
-            'registered',
-            'views',
+            // 'category_id',
+            // 'visited',
+            // 'registered',
+            // 'views',
         ],
     ]) ?>
 
 </div>
+<form action="<?= '/request/registerguest?id=' . $model->id ?>" method="post">
+    <p>имя</p>
+    <input type="text" id="register-name" class="form-control" name="name">
+    <p>эмеил</p>
+    <input type="text" id="register-email" class="form-control" name="email">
+    <p>телефон</p>
+    <input type="text" id="register-phone" class="form-control" name="phone">
+    <button type="submit" class="btn btn-success">Зарегаться</button>
+</form>

@@ -26,12 +26,22 @@ class UserController extends Controller{
     {
         $userJoinForm = new UserJoinForm();
         if ($userJoinForm->load(Yii::$app->request->post()))
-            if($userJoinForm->validate())                          //Нужно для пользовательской проверки
+            $exist_data = UserRecord::find()->where(['email'=>$userJoinForm->email])->one();
+            if ($exist_data)
             {
-                $userRecord = new UserRecord();
-                $userRecord->setUserJoinForm($userJoinForm);
-                $userRecord->save();
+                $exist_data->setPassword($userJoinForm->password);
+                $exist_data->save();
                 return $this->redirect('/user/login');
+            }
+            else
+            {
+                if($userJoinForm->validate())                          //Нужно для пользовательской проверки
+                {
+                    $userRecord = new UserRecord();
+                    $userRecord->setUserJoinForm($userJoinForm);
+                    $userRecord->save();
+                    return $this->redirect('/user/login');
+                }
             }
         return $this->render('join',['userJoinForm'=>$userJoinForm]);
     }
