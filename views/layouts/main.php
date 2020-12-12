@@ -5,7 +5,7 @@ use yii\bootstrap\NavBar;
 <? $this->beginPage();?><!--  Тригер для бутстрапа -->
 
         <head>
-            <title>Finance</title>
+            <title>СТАРТАП-ДЕПО</title>
             <? $this->head();?><!--  Тригер для бутстрапа -->
         </head>
 
