@@ -42,7 +42,9 @@ class UserController extends Controller{
                     $userRecord->setUserJoinForm($userJoinForm);
                     $userRecord->is_created = 1;
                     $userRecord->save();
-                    return $this->redirect('/user/login');
+                    $userIdentity = UserIdentity::findIdentity($userRecord->id);
+                    Yii::$app->user->login($userIdentity);
+                    return $this->redirect('/');
                 }
             }
         return $this->render('join',['userJoinForm'=>$userJoinForm]);

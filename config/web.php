@@ -4,6 +4,8 @@
     'id'=>'finance',
     'basePath'=> realpath(__DIR__.'/../'),
        'bootstrap'=>['debug'],
+       'language' => 'ru',
+       'timeZone' => 'Asia/Vladivostok',
       'components'=>[
         'urlManager'=>[
           'enablePrettyUrl'=>true,

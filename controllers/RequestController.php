@@ -103,7 +103,7 @@ class RequestController extends Controller
         $request = $this->findModel($id);
         $request->registered += 1;
         $request->save();
-        return $this->redirect(['view', 'id' => $model->id]);
+        return $this->redirect(['view', 'id' => $model->request_id]);
 
     }
 
@@ -135,6 +135,7 @@ class RequestController extends Controller
             }
             
         }
+        return $this->render('view', ['model'=>$this->findModel($id)]);
     }
 
     /**
