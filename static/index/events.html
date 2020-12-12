@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/events.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -27,6 +28,26 @@
             </div>
         </div>
     </header>
-
+    <div class="main">
+        <button id="create_event">
+            Создать событие
+        </button>
+        <input type="text" id="search" placeholder="Поиск мероприятия . . .">
+        <div class="select-div">
+            <button id="date">
+                <p>любая дата<p>
+            </button>
+            <select name="" id="type"> 
+                <option disabled>Выберите тему</option>
+                <option selected value="all">Все темы</option>
+                <option value="personal">управление персоналом</option>
+                <option value="marketing">реклама и маркетинг</option>
+                <option value="strategic">стратегическое управление</option>
+                <option value="industry">промышленность</option>
+                <option value="investment">инвестиции</option>
+                <option value="bigdata">большие данные</option>
+            </select>
+        </div>
+    </div>
 </body>
 </html>
