@@ -30,6 +30,7 @@ class UserController extends Controller{
             if ($exist_data)
             {
                 $exist_data->setPassword($userJoinForm->password);
+                $exist_data->is_created = 1;
                 $exist_data->save();
                 return $this->redirect('/user/login');
             }
@@ -39,6 +40,7 @@ class UserController extends Controller{
                 {
                     $userRecord = new UserRecord();
                     $userRecord->setUserJoinForm($userJoinForm);
+                    $userRecord->is_created = 1;
                     $userRecord->save();
                     return $this->redirect('/user/login');
                 }

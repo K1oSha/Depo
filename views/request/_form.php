@@ -43,7 +43,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'broadcasturl')->textInput(['maxlength' => true]) ?>
 
-    <?//= $form->field($model, 'category_id')->textInput() ?>
+    <?= $form->field($model, 'category_id')->checkboxList(['raz','dva']) ?>
 
     <?//= $form->field($model, 'visited')->textInput() ?>
 

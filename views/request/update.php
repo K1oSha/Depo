@@ -13,9 +13,14 @@ $this->params['breadcrumbs'][] = 'Update';
 <div class="request-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <? if (\Yii::$app->user->identity->is_moderator) { ?>
+        <?= $this->render('_form_moder', [
+        'model' => $model,
+    ]) ?>
+    <? }  else {?>
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
+    <? } ?>
 
 </div>
