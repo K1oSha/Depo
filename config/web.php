@@ -11,6 +11,7 @@
         ],
           'request'=>[
               'cookieValidationKey' => 'vsemprivetktoetochitaet',
+              'enableCsrfValidation' => false,
           ],
           'db'=> require(__DIR__.'/db.php'),
           'user'=>[

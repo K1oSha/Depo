@@ -6,6 +6,8 @@ use Yii;
 use app\models\Request;
 use app\models\RequestSearch;
 use yii\web\Controller;
+use app\models\UserRecord;
+use app\models\Contributor;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -78,6 +80,50 @@ class RequestController extends Controller
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+
+    public function actionRegister($id)
+    {
+        $model = new Contributor;
+        Yii::$app->session['test1'] = $model;
+        if (Yii::$app->request->isPost)
+        {
+            $model->user_id    = Yii::$app->user->identity->id;
+            $model->request_id = $id;
+            $model->came       = 0;
+            Yii::$app->session['test'] = $model;
+            $model->save();
+        }
+    }
+
+    public function actionRegisterguest($id)
+    {
+        $user = new UserRecord;
+        if (Yii::$app->request->post())
+        {
+            $user->email  = Yii::$app->request->post('email');
+            $user->name   = Yii::$app->request->post('name');
+            $user->number = Yii::$app->request->post('phone');
+            if ($user->validate())
+            {
+                $known = UserRecord::find()->where(['email'=>$user->email])->one();
+                if (!$known)
+                {
+                    $user->setPassword('1');
+                    $user->save();
+                }
+                else
+                {
+                    $user = $known;
+                }
+                $model             = new Contributor;
+                $model->user_id    = $user->id;
+                $model->request_id = $id;
+                $model->came       = 0;
+                $model->save();
+            }
+            
+        }
     }
 
     /**
