@@ -1,0 +1,132 @@
+.main{
+    font-family: Raleway;
+    font-style: normal;
+    margin-top: 249px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1058px;
+}
+.head{
+    font-family: Raleway;
+    font-style: normal;
+    display: flex;
+    height: 460px;
+}
+.text-div{
+    position: left;
+    width: 489px;
+    margin-right: 110px;
+    margin-top: 35px;
+}
+.img-div{
+    position: right;
+}
+.tittle{
+    font-weight: 700;
+    font-size: 30.9939px;
+    line-height: 36px;
+    color: #394A58;
+}
+.date_time-div{
+    margin-top: 42px;
+    font-weight: 500;
+    font-size: 17.6531px;
+    line-height: 21px;
+    color: #394A58;
+}
+.event_date{
+    display: flex;
+    padding-bottom: 6px;
+}
+.event_date > img{
+    display: flex;
+    padding-right: 12px;
+}
+.event_time{
+    display: flex;
+    padding-bottom: 6px;
+}
+.event_time > img{
+    display: flex;
+    padding-right: 12px;
+}
+.event_time > div{
+    padding-top: 5px;
+}
+.event_date > div{
+    padding-top: 5px;
+}
+#sign_up{
+    width: 273.2px;
+    height: 47.92px;
+    background: #E21C1C;
+    border: 0.840625px solid #E21C1C;
+    box-sizing: border-box;
+    border-radius: 15.1312px;
+    font-weight: 500;
+    font-size: 17.6531px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-top: 37px;
+    outline: none;
+}
+.share_button{
+    display: flex;
+    width: 489px;
+    height: 60px;
+    border: 1px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 18px;
+    margin-top: 51px;
+}
+.text_share{
+    width: 136px;
+    font-weight: 500;
+    font-size: 23.5375px;
+    line-height: 28px;
+    color: #394A58;
+    margin: 16px 54px 0 13px;
+}
+.share_button_icon{
+    display: flex;
+    width: 100%;
+}
+.share_button_icon > div{
+    width: 56px;
+    height: 60px;
+}
+.share_button_icon > div > img{
+    margin: 16px 0 0 16px;
+}
+.about{
+    margin-top: 125px;
+}
+.about_tittle{
+    font-weight: bold;
+    font-size: 30.9939px;
+    line-height: 36px;
+    color: #394A58;
+}
+.about_description{
+    margin-top: 46.85px;
+    font-weight: 500;
+    font-size: 17.6531px;
+    line-height: 21px;
+    color: #394A58;
+}
+.contacts{
+    margin-top: 100px;
+}
+.contacts_tittle{
+    font-weight: bold;
+    font-size: 30.9939px;
+    line-height: 36px;
+    color: #394A58;
+}
+.contacts_description{
+    margin-top: 32.85px;
+    font-weight: 500;
+    font-size: 17.6531px;
+    line-height: 21px;
+    color: #394A58;
+}

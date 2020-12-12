@@ -109,7 +109,7 @@
     opacity: 0.5;
     border-radius: 11.9661px;
 }
-.dark:hover{
+.event:hover > .dark{
     opacity: 0.9;
     filter:drop-shadow(0px 3.67609px 22.0566px rgba(0, 0, 0, 0.5));
 }

@@ -1,0 +1,68 @@
+.form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Raleway;
+    font-style: normal;
+}
+.form_modal{
+    position: relative;
+    width: 846px;
+    height: 380px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px #394A58;
+    border-radius: 35px;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form_data{
+    position: absolute;
+    margin-top: 87px;
+    margin-left: 103px;
+}
+.form_text{
+    width: 625px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: justify;
+    color: #394A58;
+
+}
+.buttons-div{
+    display: flex;
+    width: 625px;
+    margin-top: 46px;
+}
+.create_lk{
+    width: 323px;
+    height: 50px;
+    background: #E21C1C;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+.back{
+    width: 258px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #394A58;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    outline: none;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    margin-left: 42px;
+    color: #394A58;
+
+}

@@ -1,0 +1,88 @@
+.blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+.form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Raleway;
+    font-style: normal;
+}
+.form_modal{
+    position: relative;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 794px;
+    height: 541.53px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 37.5414px #394A58;
+    border-radius: 32.8487px;
+}
+.form_data{
+    position: absolute;
+    margin-top: 54px;
+    margin-left: 103px;
+}
+.field-input{
+    font-weight: 500;
+    font-size: 19.7092px;
+    line-height: 23px;
+    color: #394A58;
+    margin-bottom: 11px;
+}
+.field-title{
+    margin-bottom: 11px;
+}
+.field-input-div{
+    width: 587.52px;
+    height: 46.93px;
+    background: #FFFFFF;
+    border: 0.938534px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    outline: none;
+    font-weight: 500;
+    font-size: 19.7092px;
+    line-height: 23px;
+    color: rgba(57, 74, 88, 0.4);
+    padding-left: 20px;
+}
+.checkbox-div{
+    width: 14.08px;
+    height: 14.08px;
+    margin: 0;
+    margin-top: 4px;
+    background: #FFFFFF;
+    border: 0.938534px solid #000000;
+    box-sizing: border-box;
+    border-radius: 2.8156px;
+}
+.checkbox_text{
+    font-weight: 500;
+    font-size: 19.7092px;
+    line-height: 23px;
+    margin-left: 15px;
+}
+#submit_event{
+    margin-top: 65.7px;
+    width: 589.4px;
+    height: 46.93px;
+    background: #E21C1C;
+    border: 0.938534px solid #E21C1C;
+    box-sizing: border-box;
+    border-radius: 16.8936px;
+    font-weight: 500;
+    font-size: 19.7092px;
+    line-height: 23px;
+    color: #FFFFFF;
+    outline: none;
+}
