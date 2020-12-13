@@ -38,9 +38,23 @@ class RequestController extends Controller
     public function actionIndex()
     {
         $searchModel = new RequestSearch();
+        $searchModel->confirmed = 1;
+
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionIndexmod()
+    {
+        // 'confirmed' => $this->confirmed,
+        $searchModel = new RequestSearch();
+        $searchModel->confirmed = 0;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('index_mod', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
@@ -74,11 +88,20 @@ class RequestController extends Controller
         if ($model->load(Yii::$app->request->post()))
         {
             $model->author_id = Yii::$app->user->identity->id;
-            $model->category_id =  implode(', ', $model->category_id);
-            Yii::$app->session['jsal'] =$model;
+            $model->start = date("Y-m-d H:i",strtotime($model->start));
+            $model->end = date("Y-m-d H:i",strtotime($model->end));
+            $model->bannerurl = '/banners/pasha.png'; 
+            $model->confirmed = 0; 
+            $model->contacts = 'Организатор: РЖД<br>E-mail: g-shock@gmail.clock<br>Швец Анна Владимировна +7 (916) 237-50-76';
+            $model->register_end = date("Y-m-d H:i",strtotime($model->register_end));
+            // $model->category_id =  implode(', ', $model->category_id);
             if ($model->save()) {
-                
-                return $this->redirect(['view', 'id' => $model->id]);
+                $contrib = new Contributor;
+                $contrib->user_id = Yii::$app->user->identity->id;
+                $contrib->request_id = $model->id;
+                $contrib->came = 0;
+                $contrib->save();
+                return $this->redirect(['index']);
 
             } 
         }
@@ -150,7 +173,11 @@ class RequestController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-            if ($model->category_id) $model->category_id =  implode(', ', $model->category_id);
+            if (Yii::$app->user->identity->is_moderator)
+            {
+                $model->confirmed = 1;
+            }
+            // if ($model->category_id) $model->category_id =  implode(', ', $model->category_id);
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }

@@ -179,7 +179,7 @@
     margin: 10px 20px 10px 0;
     border-radius: 11.9661px;
     background-position: 50% 50%;
-    background: url(../templates/plus_event.svg) no-repeat center center, #FFFFFF;
+    background: url(../templates/plus_event.svg) no-repeat center 80px, #FFFFFF;
     border: 0.828885px solid #394A58;
     box-sizing: border-box;
 }
@@ -190,7 +190,41 @@
     line-height: 21px;
     color: #394A58;
     width: 195px;
-    margin-top: 250px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.competence_list{
+    margin-top: 26.52px;
+}
+.competence_card{
+    position: relative;
+    width: 216.34px;
+    height: 264.41px;
+    background: #FFFFFF;
+    border: 0.828885px solid #394A58;
+    box-sizing: border-box;
+    border-radius: 14.9199px;
+    margin-right: 63px;
+}
+.icon{
+    position: relative;
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40.62px;
+}
+.competence_title{
+    position: absolute;
+    top:calc(264.41px - 60px);
+    font-weight: 500;
+    font-size: 18.2355px;
+    color: #394A58;
+    width: 100%;
+}
+.competence_title > div{
+    position: relative;
+    width: fit-content; 
     margin-left: auto;
     margin-right: auto;
 }

@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="line">
                         <? $i++;} ?>
                         
-                    <a href="<?= '/request/view?id=' . $event->id?>">
+                    <a href="<?= '/request/update?id=' . $event->id?>">
                         <div class="event" style="background-image: url(<?= $event->bannerurl?>);">
                             <div class="dark"></div>
                             <div class="event-text">

@@ -73,7 +73,7 @@ class UserController extends Controller{
             if ($userLoginForm->validate())
             {
                 $userLoginForm->login();
-                return $this->redirect('/');
+                return $this->redirect('/request');
             }
         return $this->render('login',['userLoginForm'=>$userLoginForm]);
     }
@@ -81,6 +81,6 @@ class UserController extends Controller{
     public function actionLogout()
     {
         Yii::$app->user->logout();
-        return $this->redirect('/');
+        return $this->redirect('/request');
     }
 }

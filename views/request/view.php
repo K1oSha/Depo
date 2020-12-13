@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <button type="submit" id="sign_up" data-toggle="modal" data-target="#modal">Зарегистрироваться</button>
                     <!-- </form> -->
                 <? } else { 
-                    if (\app\models\Contributor::find()->where(['and', 'user_id'=>\Yii::$app->user->identity->id,'request_id'=>$model->id])->one())
+                    if (\app\models\Contributor::find()->where(['and', ['user_id'=>\Yii::$app->user->identity->id,'request_id'=>$model->id]])->one())
                     { ?>
                         <button type="submit" class="info-btn" disabled>Вы уже зарегистрированы</button>
                     <?} else {  ?>

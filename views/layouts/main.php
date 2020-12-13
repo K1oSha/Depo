@@ -21,7 +21,7 @@ use yii\bootstrap\NavBar;
         <header>
         <div class="data">
             <div>
-                <a href="/"><img src="../templates/logo.svg" alt="" class="logo"></a>
+                <a href="/request/"><img src="../templates/logo.svg" alt="" class="logo"></a>
             </div>
             <div class="menu">
                 <ul>
@@ -41,7 +41,7 @@ use yii\bootstrap\NavBar;
                     </ul>
                 <?  }  else {?>
                     <ul>
-                        <li><a href="#"><?= Yii::$app->user->identity->name ?></a></li>
+                        <li><a href="<?='/user/cabinet?id=' . Yii::$app->user->identity->id?>"><?= Yii::$app->user->identity->name ?></a></li>
                         <li><a href="/user/logout">Выйти</a></li>
                     </ul>
                     <? } ?>
